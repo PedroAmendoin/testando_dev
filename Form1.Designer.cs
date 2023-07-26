@@ -31,6 +31,9 @@
             this.avançar = new System.Windows.Forms.Button();
             this.Txtnome = new System.Windows.Forms.TextBox();
             this.cadastro = new System.Windows.Forms.Label();
+            this.conectar = new System.Windows.Forms.Button();
+            this.Txtsenha = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // avançar
@@ -45,7 +48,7 @@
             // 
             // Txtnome
             // 
-            this.Txtnome.Location = new System.Drawing.Point(172, 149);
+            this.Txtnome.Location = new System.Drawing.Point(172, 132);
             this.Txtnome.Name = "Txtnome";
             this.Txtnome.Size = new System.Drawing.Size(440, 20);
             this.Txtnome.TabIndex = 1;
@@ -55,12 +58,40 @@
             // cadastro
             // 
             this.cadastro.AutoSize = true;
-            this.cadastro.Location = new System.Drawing.Point(137, 149);
+            this.cadastro.Location = new System.Drawing.Point(138, 132);
             this.cadastro.Name = "cadastro";
-            this.cadastro.Size = new System.Drawing.Size(19, 13);
+            this.cadastro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cadastro.Size = new System.Drawing.Size(27, 13);
             this.cadastro.TabIndex = 2;
-            this.cadastro.Text = "cd";
+            this.cadastro.Text = "nom";
             this.cadastro.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // conectar
+            // 
+            this.conectar.Location = new System.Drawing.Point(360, 286);
+            this.conectar.Name = "conectar";
+            this.conectar.Size = new System.Drawing.Size(75, 23);
+            this.conectar.TabIndex = 3;
+            this.conectar.Text = "conec";
+            this.conectar.UseVisualStyleBackColor = true;
+            this.conectar.Click += new System.EventHandler(this.conectar_Click);
+            // 
+            // Txtsenha
+            // 
+            this.Txtsenha.Location = new System.Drawing.Point(172, 176);
+            this.Txtsenha.Name = "Txtsenha";
+            this.Txtsenha.Size = new System.Drawing.Size(440, 20);
+            this.Txtsenha.TabIndex = 4;
+            this.Txtsenha.Text = "digite a senha...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(131, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "senha";
             // 
             // FrmCliente
             // 
@@ -69,6 +100,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Txtsenha);
+            this.Controls.Add(this.conectar);
             this.Controls.Add(this.cadastro);
             this.Controls.Add(this.Txtnome);
             this.Controls.Add(this.avançar);
@@ -88,6 +122,9 @@
         private System.Windows.Forms.Button avançar;
         private System.Windows.Forms.TextBox Txtnome;
         private System.Windows.Forms.Label cadastro;
+        private System.Windows.Forms.Button conectar;
+        private System.Windows.Forms.TextBox Txtsenha;
+        private System.Windows.Forms.Label label1;
     }
 }
 

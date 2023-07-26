@@ -41,3 +41,8 @@ C:\Users\aluno\source\repos\testando\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\aluno\source\repos\testando\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\aluno\source\repos\testando\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\aluno\source\repos\testando\obj\Debug\testando.csproj.CopyComplete
+C:\Users\aluno\source\repos\testando\bin\Debug\Controller.dll
+C:\Users\aluno\source\repos\testando\bin\Debug\Modelo.dll
+C:\Users\aluno\source\repos\testando\bin\Debug\Controller.pdb
+C:\Users\aluno\source\repos\testando\bin\Debug\Controller.dll.config
+C:\Users\aluno\source\repos\testando\bin\Debug\Modelo.pdb
