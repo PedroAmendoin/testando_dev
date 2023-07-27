@@ -21,6 +21,8 @@ namespace testando
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            UsuarioController usControle = new UsuarioController();
+            dtUsuario.DataSource = usControle.ObterDados("select * from usuario");
             MessageBox.Show("olá");
         }
 
@@ -32,15 +34,23 @@ namespace testando
             usmodelo.nome = Txtnome.Text;
             usmodelo.senha = Txtsenha.Text;
             UsuarioController uscontrole = new UsuarioController();
-            if (uscontrole.cadastrar(usmodelo) == true)
+            //se campos diferente de vazio entao
+            if (usmodelo.nome != "" && usmodelo.senha != "")
             {
-                MessageBox.Show("Usuário cadastrado com sucesso");
+                if (uscontrole.cadastrar(usmodelo) == true)
+                {
+                    MessageBox.Show("Usuário cadastrado com sucesso" + Txtnome.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Usuário não cadastrado");
+                }
+                // MessageBox.Show("nome " + Txtnome.Text);
             }
             else
             {
-                MessageBox.Show("Usuário não cadastrado " + Txtnome.Text);
+                MessageBox.Show("Campos estão vazios");
             }
-           // MessageBox.Show("nome " + Txtnome.Text);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,5 +77,26 @@ namespace testando
             
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {//convertendo a 1 celula em inteiro
+            int codigo = Convert.ToInt32(dtUsuario.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+            //converte o inteiro para string; row é linha, column é coluna e cell é a celula atravessada pela linhae coluna
+            MessageBox.Show("Usuario selecionado :" + codigo.ToString());
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

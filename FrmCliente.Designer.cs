@@ -34,21 +34,26 @@
             this.conectar = new System.Windows.Forms.Button();
             this.Txtsenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtUsuario = new System.Windows.Forms.DataGridView();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // avançar
             // 
-            this.avançar.Location = new System.Drawing.Point(172, 212);
+            this.avançar.BackColor = System.Drawing.Color.White;
+            this.avançar.Location = new System.Drawing.Point(172, 199);
             this.avançar.Name = "avançar";
             this.avançar.Size = new System.Drawing.Size(440, 32);
             this.avançar.TabIndex = 0;
             this.avançar.Text = "go";
-            this.avançar.UseVisualStyleBackColor = true;
+            this.avançar.UseVisualStyleBackColor = false;
             this.avançar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Txtnome
             // 
-            this.Txtnome.Location = new System.Drawing.Point(172, 132);
+            this.Txtnome.Location = new System.Drawing.Point(172, 90);
             this.Txtnome.Name = "Txtnome";
             this.Txtnome.Size = new System.Drawing.Size(440, 20);
             this.Txtnome.TabIndex = 1;
@@ -58,7 +63,7 @@
             // cadastro
             // 
             this.cadastro.AutoSize = true;
-            this.cadastro.Location = new System.Drawing.Point(138, 132);
+            this.cadastro.Location = new System.Drawing.Point(134, 93);
             this.cadastro.Name = "cadastro";
             this.cadastro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cadastro.Size = new System.Drawing.Size(27, 13);
@@ -68,17 +73,18 @@
             // 
             // conectar
             // 
-            this.conectar.Location = new System.Drawing.Point(360, 286);
+            this.conectar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.conectar.Location = new System.Drawing.Point(357, 253);
             this.conectar.Name = "conectar";
             this.conectar.Size = new System.Drawing.Size(75, 23);
             this.conectar.TabIndex = 3;
             this.conectar.Text = "conec";
-            this.conectar.UseVisualStyleBackColor = true;
+            this.conectar.UseVisualStyleBackColor = false;
             this.conectar.Click += new System.EventHandler(this.conectar_Click);
             // 
             // Txtsenha
             // 
-            this.Txtsenha.Location = new System.Drawing.Point(172, 176);
+            this.Txtsenha.Location = new System.Drawing.Point(172, 147);
             this.Txtsenha.Name = "Txtsenha";
             this.Txtsenha.Size = new System.Drawing.Size(440, 20);
             this.Txtsenha.TabIndex = 4;
@@ -87,11 +93,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 176);
+            this.label1.Location = new System.Drawing.Point(130, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "senha";
+            // 
+            // dtUsuario
+            // 
+            this.dtUsuario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dtUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtUsuario.Location = new System.Drawing.Point(172, 288);
+            this.dtUsuario.Name = "dtUsuario";
+            this.dtUsuario.Size = new System.Drawing.Size(440, 150);
+            this.dtUsuario.TabIndex = 6;
+            this.dtUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUsuario_CellClick);
+            this.dtUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(477, 252);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(585, 252);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // FrmCliente
             // 
@@ -100,6 +137,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.dtUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txtsenha);
             this.Controls.Add(this.conectar);
@@ -112,6 +152,7 @@
             this.Name = "FrmCliente";
             this.Text = "eae";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +166,9 @@
         private System.Windows.Forms.Button conectar;
         private System.Windows.Forms.TextBox Txtsenha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtUsuario;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 
