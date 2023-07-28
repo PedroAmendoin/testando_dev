@@ -111,10 +111,28 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaUsuarios.Designer.cs">
+      <DependentUpon>Frm_ListaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaUsuarios.resx">
+      <DependentUpon>Frm_ListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,11 +159,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">
-      <Project>{4555a865-89c3-4f89-8f90-c438f14cc70e}</Project>
+      <Project>{9ddadf62-dca7-416c-9de2-d22daacc6c3f}</Project>
       <Name>Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{8a27097d-8521-44c5-af6c-367cf2466a12}</Project>
+      <Project>{accedaa8-a68f-40c9-8312-d44785fe39b2}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>

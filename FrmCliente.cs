@@ -14,6 +14,7 @@ namespace testando
 {
     public partial class FrmCliente : Form
     {
+        int codigo;
         public FrmCliente()
         {
             InitializeComponent();
@@ -65,7 +66,7 @@ namespace testando
         private void conectar_Click(object sender, EventArgs e)
         {
 
-            conexao conexao = new conexao();
+            Conexao conexao = new Conexao();
             if(conexao.getConexao() == null)
             {
                 MessageBox.Show("erro de conexão");
@@ -87,16 +88,44 @@ namespace testando
             int codigo = Convert.ToInt32(dtUsuario.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
             //converte o inteiro para string; row é linha, column é coluna e cell é a celula atravessada pela linhae coluna
             MessageBox.Show("Usuario selecionado :" + codigo.ToString());
+            Txtnome.Text = dtUsuario.Rows[e.RowIndex].Cells["nome"].Value.ToString();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            UsuarioController uscontroller = new UsuarioController();
+            UsuarioModelo usmodelo = new UsuarioModelo();
+            usmodelo.nome= Txtnome.Text;
+            usmodelo.senha= Txtsenha.Text;
+            usmodelo.idusuario = codigo;
+            if(uscontroller.editar(usmodelo) == true)
+            {
+                MessageBox.Show("Usuario Atualizado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao atualizar uzuario");
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            UsuarioController uscontroller = new UsuarioController();
+            //chamo o metodo excluir do usuario controler se verdade
+            if (uscontroller.Excluir(codigo) == true)
+            { //excluir o usuario
+                MessageBox.Show("codigo do Usuario " + codigo + "excluido com sucesso");
+            }
+            else
+            { //falso erro ao excluir
+                MessageBox.Show("Erro ao excluir o usuário");
+            }
+        }
 
+        private void btnListarUsuario_Click(object sender, EventArgs e)
+        {
+            Frm_ListaUsuarios frm_Lista = new Frm_ListaUsuarios();
+            frm_Lista.ShowDialog();
         }
     }
 }

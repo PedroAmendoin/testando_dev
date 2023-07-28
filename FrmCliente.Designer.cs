@@ -37,6 +37,7 @@
             this.dtUsuario = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnListarUsuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,9 +127,19 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Text = "atualizar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnListarUsuario
+            // 
+            this.btnListarUsuario.Location = new System.Drawing.Point(643, 376);
+            this.btnListarUsuario.Name = "btnListarUsuario";
+            this.btnListarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnListarUsuario.TabIndex = 9;
+            this.btnListarUsuario.Text = "avançar";
+            this.btnListarUsuario.UseVisualStyleBackColor = true;
+            this.btnListarUsuario.Click += new System.EventHandler(this.btnListarUsuario_Click);
             // 
             // FrmCliente
             // 
@@ -137,6 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.btnListarUsuario);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.dtUsuario);
@@ -150,6 +162,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eae";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).EndInit();
@@ -169,6 +182,7 @@
         private System.Windows.Forms.DataGridView dtUsuario;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnListarUsuario;
     }
 }
 
